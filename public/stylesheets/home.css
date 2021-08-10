@@ -1,0 +1,64 @@
+.home main{
+    width: 90%;
+    margin: 0 auto;
+}
+
+
+.home main section.cuadro{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.home main section.cuadro article .pequeño{
+    display: flex;
+}
+.home main section.cuadro article{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.home main section .imagenGrande{
+    width: 400px;
+    height: 320px;
+    background-image: url('../images/cuadro/Ford.jpg');
+    background-position: center;
+    background-size: cover;
+    margin: 10px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+.home main section .imagenMediana{
+    width: 320px;
+    height: 150px;
+    background-image: url('/images/cuadro/Bmw.jpg');
+    background-position: center;
+    background-size: cover;
+    background-position-y: 230px;
+    margin: 10px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+
+.home main section .imagenPequeña{
+    width: 150px;
+    height: 150px;
+    background-position: center;
+    background-size: cover;
+    background-size: cover;
+    background-image: url('/images/cuadro/AstonM.jpg');
+    margin: 10px;
+    transition-property: transform;
+    transition-duration: 0.5s;
+}
+
+
+
+.home main section .imagenMediana:hover,
+.home main section .imagenPequeña:hover,
+.home main section .imagenGrande:hover
+{
+    transform: scale(1.1);
+}
