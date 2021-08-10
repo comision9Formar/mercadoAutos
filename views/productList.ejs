@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <%- include('./partials/head')  %> 
+  <body>
+    <%- include('./partials/header')  %> 
+    <main>
+        <div class="container">
+            <div class="row">
+                <% autos.forEach(auto => { %>
+                    <div class="col-12 col-md-3 col-lg-4">
+                        <div class="card" style="width: 18rem;">
+                            <img src="..." class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <h5 class="card-title"><%= auto.marca %> <%= auto.modelo %></h5>
+                              <p class="card-text">$<%= auto.precio %> </p>
+                              <a href="/products/detail/<%= auto.id %>" class="btn btn-primary">Más info</a>
+                            </div>
+                          </div>
+                    </div>
+                <% }) %>
+            </div>
+        </div>
+    </main>
+    <%- include('./partials/footer')  %> 
+
+  </body>
+</html>
