@@ -4,3 +4,8 @@ body{
   padding: 0;
   background-color: whitesmoke;
 }
+@import url('./general.css');
+@import url('./header.css');
+@import url('./footer.css');
+@import url('./home.css');
+
