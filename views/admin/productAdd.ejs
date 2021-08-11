@@ -5,7 +5,7 @@
     <%- include('./partials/header')  %> 
     <main class="my-5">
         <div class="container">
-            <form class="row g-3 needs-validation" novalidate>
+            <form action="" class="row g-3 needs-validation" method="POST" novalidate enctype="multipart/form-data">
                 <div class="col-12 col-md-6 col-lg-4">
                   <label for="marca" class="form-label">Marca</label>
                   <input type="text" class="form-control" id="marca" required name="marca">
@@ -21,14 +21,21 @@
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <label for="precio" class="form-label">Precio</label>
-                  <div class="input-group has-validation">
-                    <input type="number" class="form-control" id="precio" name="precio" required>
-                    <div class="invalid-feedback">
-                      Please choose a username.
-                    </div>
-                  </div>
+                  <label for="patente" class="form-label">Patente</label>
+                <input type="text" class="form-control" id="patente" name="patente" required>
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
                 </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <label for="precio" class="form-label">Precio</label>
+              <div class="input-group has-validation">
+                <input type="number" class="form-control" id="precio" name="precio" required>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
                 <div class="col-12 col-md-6 col-lg-4">
                     <label for="cuotas" class="form-label">Cuotas</label>
                     <input type="number" class="form-control" id="cuotas" name="cuotas" required>
@@ -37,33 +44,40 @@
                     </div>
                   </div>
                   <div class="col-12 col-md-6 col-lg-4">
-                    <label for="anio" class="form-label">Año</label>
-                  <input type="date" class="form-control" id="anio" name="anio" required>
+                    <label for="fecha" class="form-label">Año</label>
+                  <input type="date" class="form-control" id="fecha" name="fecha" required>
+                    <!--<input type="number" min="2000" max="2021" step="1" />-->
                   <div class="invalid-feedback">
                     Please provide a valid city.
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <label for="color" class="form-label">Color</label>
-                  <input type="color" class="form-control" id="color" name="color" required>
-                  <div class="invalid-feedback">
-                    Please select a valid state.
-                  </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <label for="patente" class="form-label">Patente</label>
-                  <input type="text" class="form-control" id="patente" name="patente" required>
+                  <label for="km" class="form-label">Kilometraje</label>
+                  <input type="number" class="form-control" id="km" name="km" required>
                   <div class="invalid-feedback">
                     Please provide a valid zip.
                   </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <label for="km" class="form-label">Kilometraje</label>
-                    <input type="number" class="form-control" id="km" name="km" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid zip.
-                    </div>
+                    <label for="color" class="form-label">Color</label>
+                    <select name="color" id="color" class="form-select">
+                      <option value="" hidden selected>Seleccione el color...</option>
+                      <% colores.forEach(color => { %>
+                        <option value="<%= color %>"><%= capitalizarPrimeraLetra(color) %></option>
+                      <% }) %>
+                    </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
                   </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <label for="imagen" class="form-label">Imagen</label>
+                  <input type="file" class="form-control" id="imagen" name="imagen" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+              
                 
                 <div class="col-12">
                   <button class="btn btn-primary" type="submit">Submit form</button>

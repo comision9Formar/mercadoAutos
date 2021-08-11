@@ -1,50 +1,67 @@
 [
-    {
-      "id" : 1,
-      "marca": "Ford",
-      "modelo": "Fiesta",
-      "precio": 150000,
-      "km": 200,
-      "color": "Azul",
-      "cuotas": 12,
-      "anio": 2019,
-      "patente": "APL123",
-      "vendido": false
-    },
-    {
-      "id" : 2,
-      "marca": "Toyota",
-      "modelo": "Corolla",
-      "precio": 100000,
-      "km": 0,
-      "color": "Blanco",
-      "cuotas": 14,
-      "anio": 2019,
-      "patente": "JLK116",
-      "vendido": true
-    },
-    {
-      "id" : 3,
-      "marca": "Chevrolet",
-      "modelo": "Spin",
-      "precio": 200000,
-      "km": 0,
-      "color": "Azul",
-      "cuotas": 14,
-      "anio": 2019,
-      "patente": "LMK116",
-      "vendido": false
-    },
-    {
-      "id" : 4,
-      "marca": "Renault",
-      "modelo": "Fluence",
-      "precio": 250000,
-      "km": 0,
-      "color": "Rojo",
-      "cuotas": 14,
-      "anio": 2020,
-      "patente": "ASD116",
-      "vendido": true
-    }
-  ]
+  {
+    "id": 1,
+    "marca": "Lamborghini",
+    "modelo": "Murciélago",
+    "imagen": "imagen-1628717125303.jpg",
+    "precio": 150000,
+    "km": 200,
+    "color": "amarillo",
+    "cuotas": 12,
+    "anio": 2019,
+    "patente": "AP 123 456",
+    "vendido": false
+  },
+  {
+    "id": 2,
+    "marca": "Fiat",
+    "modelo": "Cronos",
+    "imagen": "imagen-1628717075158.webp",
+    "precio": 100000,
+    "km": 0,
+    "color": "blanco",
+    "cuotas": 14,
+    "anio": 2019,
+    "patente": "JLK116",
+    "vendido": true
+  },
+  {
+    "id": 3,
+    "marca": "Ford",
+    "modelo": "Mondeo",
+    "imagen": "imagen-1628717189194.webp",
+    "precio": 200000,
+    "km": 0,
+    "color": "azul",
+    "cuotas": 14,
+    "anio": 2019,
+    "patente": "LM 112 AD",
+    "vendido": false
+  },
+  {
+    "id": 4,
+    "marca": "Fiat",
+    "modelo": "Movi",
+    "imagen": "imagen-1628717230574.webp",
+    "precio": 250000,
+    "km": 0,
+    "color": "rojo",
+    "cuotas": 14,
+    "anio": 2020,
+    "patente": "AS 116 DF",
+    "vendido": true
+  },
+  {
+    "id": 5,
+    "marca": "Lamborghini",
+    "modelo": "Veneno",
+    "imagen": "imagen-1628714831791.jpg",
+    "precio": 1500000,
+    "km": 100,
+    "color": "gris",
+    "cuotas": 24,
+    "anio": 2018,
+    "patente": "AD 125 AD",
+    "vendido": false
+  }
+]

@@ -1,12 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html>
+  <%- include('../partials/head',{title: "Editar"})  %> 
+  <body>
+    <%- include('./partials/header')  %> 
+    <main class="my-5">
+        <div class="container ">
+            <h2>Editar "<%= auto.marca %> <%= auto.modelo %>"  </h2>
+            <form action="/products/edit/<%= auto.id %>?_method=PUT" class="row g-3 needs-validation" method="POST" novalidate enctype="multipart/form-data" >
+                <div class="col-12 col-md-6 col-lg-4">
+                  <label for="marca" class="form-label">Marca</label>
+                  <input type="text" class="form-control" id="marca" required name="marca" value="<%= auto.marca %> ">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <label for="modelo" class="form-label">Modelo</label>
+                  <input type="text" class="form-control" id="modelo" required name="modelo" value="<%= auto.modelo %> "> 
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <label for="patente" class="form-label">Patente</label>
+                <input type="text" class="form-control" id="patente" name="patente" required value="<%= auto.patente %> ">
+                <div class="invalid-feedback">
+                  Please provide a valid zip.
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <label for="precio" class="form-label">Precio</label>
+              <div class="input-group has-validation">
+                <input type="number" class="form-control" id="precio" name="precio" required value=<%= auto.precio %>>
+                <div class="invalid-feedback">
+                  Please choose a username.
+                </div>
+              </div>
+            </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <label for="cuotas" class="form-label">Cuotas</label>
+                    <input type="number" class="form-control" id="cuotas" name="cuotas" required value=<%= auto.cuotas %> >
+                    <div class="invalid-feedback">
+                      Please provide a valid zip.
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6 col-lg-4">
+                    <label for="fecha" class="form-label">Año</label>
+                 <!--  <input type="date" class="form-control" id="fecha" name="fecha" required > -->
+                    <input class="form-control" type="number" min="2000" max="2021" step="1" value=<%= auto.anio %>  name="anio"/>
+                  <div class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <label for="km" class="form-label">Kilometraje</label>
+                  <input type="number" class="form-control" id="km" name="km" required value=<%= auto.km %> >
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <label for="color" class="form-label">Color</label>
+                    <select name="color" id="color" class="form-select">
+                      <option value="" hidden selected>Seleccione el color...</option>
+                      <% colores.forEach(color => { %>
+                        <option value="<%= color %>" <%= color.toLowerCase() === auto.color.toLowerCase() ? 'selected' : null %> ><%= capitalizarPrimeraLetra(color) %></option>
+                      <% }) %>
+                    </select>
+                  <div class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                  <label for="imagen" class="form-label">Cambiar imagen</label>
+                  <input type="file" class="form-control" id="imagen" name="imagen" required>
+                  <div class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+                <div class="form-check form-switch">
+                    <label class="form-check-label" for="flexSwitchCheckDefault">Vendido </label>
+                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" <%= auto.vendido ? 'checked' : null %> name="vendido">
+                  </div>
+                <div class="col-12">
+                  <button class="btn btn-primary" type="submit">Submit form</button>
+                </div>
+              </form>
+        </div>
+    </main>
+
+
+    <%- include('../partials/footer')  %> 
+
+  </body>
 </html>
